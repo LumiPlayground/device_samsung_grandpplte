@@ -72,3 +72,16 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.software.sip.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.sip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml
+
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.telephony.ril_class=grandpplteRIL
+
+# Disable mobile data on first boot
+PRODUCT_PROPERTY_OVERRIDES += ro.com.android.mobiledata=false
+
+# Disable Data Roaming
+PRODUCT_PROPERTY_OVERRIDES += ro.com.android.dataroaming=false
+
+# Disable SIM keyguard
+PRODUCT_PROPERTY_OVERRIDES += keyguard.no_require_sim=true
