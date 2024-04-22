@@ -18,6 +18,27 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 TARGET_SCREEN_HEIGHT := 960
 TARGET_SCREEN_WIDTH := 540
 
+# Audio
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    audio.usb.default \
+    audio.r_submix.default \
+    audio_policy.default \
+    libaudio-resampler \
+    libaudiospdif \
+    libaudioutils \
+    libtinyalsa \
+    libtinycompress \
+    libtinyxml
+
+# Audio Configs
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/a2dp_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_policy_volumes.xml \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default_volume_tables.xml \
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/usb_audio_policy_configuration.xml
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.audio.low_latency.xml \
