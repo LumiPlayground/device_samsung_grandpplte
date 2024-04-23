@@ -93,3 +93,17 @@ PRODUCT_PROPERTY_OVERRIDES += ro.com.android.dataroaming=false
 
 # Disable SIM keyguard
 PRODUCT_PROPERTY_OVERRIDES += keyguard.no_require_sim=true
+
+# Rootdir
+PRODUCT_PACKAGES += \
+    fstab.mt6735 \
+    init.modem.rc \
+    init.mt6735.rc \
+    init.mt6735.usb.rc \
+    init.project.rc \
+    init.recovery.mt6735.rc \
+    init.wifi.rc \
+    ueventd.mt6735.rc
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/init/init.rilchip.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.rilchip.rc
