@@ -1,7 +1,6 @@
 # Proprietary files - from MMB29T.G532GDSU1ASA5, unless pinned
 
 # Audio
-bin/audiocmdservice_atci
 lib/hw/audio.primary.mt6737t.so
 lib/lib_SamsungRec_V06002.so
 lib/libaudio-ril.so

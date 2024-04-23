@@ -869,13 +869,6 @@ service nvram_daemon /system/bin/nvram_daemon
     group system
     oneshot
 
-service audio-daemon /system/bin/audiocmdservice_atci
-    class main
-    socket atci-audio stream 660 root system
-    user root
-    disabled
-    oneshot
-
 service pq /system/bin/pq
     class core
     user system
