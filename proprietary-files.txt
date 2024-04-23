@@ -209,7 +209,7 @@ bin/fuelgauged
 lib/libfgauge.so
 
 # GPS
-xbin/mnld
+xbin/mnld:bin/mnld
 bin/mtk_agpsd
 bin/wifi2agps
 lib/libmnl.so
