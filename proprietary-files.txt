@@ -236,9 +236,6 @@ lib/libpq_prot.so
 lib/libpqservice.so
 lib/libui_ext.so
 
-# Lights
-lib/hw/lights.mt6737t.so
-
 # NVRAM
 bin/nvram_agent_binder
 bin/nvram_daemon
